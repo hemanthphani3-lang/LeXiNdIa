@@ -15,6 +15,18 @@ export const signIn = async (email, password) => {
     email,
     password,
   });
+
+  if (data?.user) {
+    // Sync profile metadata on every sign-in
+    await supabase.from('profiles').upsert({
+      id: data.user.id,
+      email: data.user.email,
+      full_name: data.user.user_metadata?.full_name,
+      role: data.user.user_metadata?.role || 'citizen',
+      updated_at: new Date().toISOString()
+    });
+  }
+
   return { data, error };
 };
 
