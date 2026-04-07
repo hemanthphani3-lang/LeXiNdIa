@@ -1,0 +1,130 @@
+﻿Γùç injected env (2) from .env // tip: Γîü auth for agents [www.vestauth.com]
+Seeding articles...
+Error seeding articles: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.articles' in the schema cache"
+}
+Seeding quizzes...
+Error seeding quiz 1: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 2: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 3: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 4: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 5: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 6: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 7: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 8: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 9: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 10: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 11: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 12: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 13: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 14: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 15: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 16: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 17: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 18: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 19: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Error seeding quiz 20: {
+  code: 'PGRST205',
+  details: null,
+  hint: null,
+  message: "Could not find the table 'public.quizzes' in the schema cache"
+}
+Database seeding completed!
