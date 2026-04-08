@@ -10,6 +10,22 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Auth Helpers
+export const syncProfile = async (user, profileData = {}) => {
+  if (!user) return;
+  
+  const { error } = await supabase.from('profiles').upsert({
+    id: user.id,
+    email: user.email,
+    full_name: user.user_metadata?.full_name || profileData.full_name,
+    role: user.user_metadata?.role || profileData.role || 'citizen',
+    updated_at: new Date().toISOString(),
+    ...profileData
+  });
+  
+  if (error) console.error('Error syncing profile:', error);
+  return { error };
+};
+
 export const signIn = async (email, password) => {
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
@@ -17,14 +33,7 @@ export const signIn = async (email, password) => {
   });
 
   if (data?.user) {
-    // Sync profile metadata on every sign-in
-    await supabase.from('profiles').upsert({
-      id: data.user.id,
-      email: data.user.email,
-      full_name: data.user.user_metadata?.full_name,
-      role: data.user.user_metadata?.role || 'citizen',
-      updated_at: new Date().toISOString()
-    });
+    await syncProfile(data.user);
   }
 
   return { data, error };
@@ -38,6 +47,12 @@ export const signUp = async (email, password, metadata = {}) => {
       data: metadata,
     },
   });
+
+  if (data?.user && !error) {
+    // Attempt to create profile immediately if user is returned (sometimes session is null)
+    await syncProfile(data.user, metadata);
+  }
+
   return { data, error };
 };
 

@@ -10,6 +10,17 @@ export default function CitizenSignup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSignedUp, setIsSignedUp] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    state: '',
+    city: '',
+    password: '',
+    confirmPassword: '',
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
